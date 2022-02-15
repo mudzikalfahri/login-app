@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sign_in_up/constants.dart';
 import 'package:sign_in_up/screens/components/roundedbutton.dart';
+import 'package:sign_in_up/screens/login/login.dart';
 import 'package:sign_in_up/screens/welcome/components/background.dart';
 
 class Body extends StatelessWidget {
@@ -9,16 +10,13 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    var heading = 'Work remotely with client or company';
+    var heading = 'Find the Perfect Freelance Services';
     var data =
-        'In 2021, many workers are working from home during pandemix. That can be set up by our app. Register now and get all the features.';
+        'Upgrade to a curated experience packed with tools and benefits, dedicated to businesses. Get matched with the perfect talent by a customer success manager';
     return Background(
         child: SingleChildScrollView(
       child: Column(
         children: <Widget>[
-          Image.asset(
-            "assets/images/logo.png",
-          ),
           Image.asset(
             "assets/images/char.png",
             height: size.height * 0.4,
@@ -42,7 +40,7 @@ class Body extends StatelessWidget {
               data,
               textAlign: TextAlign.center,
               // ignore: prefer_const_constructors
-              style: TextStyle(fontSize: 12, color: kTextLightColor),
+              style: TextStyle(fontSize: 10, color: kTextLightColor),
             ),
           ),
           SizedBox(
@@ -50,17 +48,31 @@ class Body extends StatelessWidget {
           ),
           RoundedButton(
             text: 'Register Now',
-            press: () {},
-            color: kPrimaryColor,
-            textColor: Colors.white,
+            press: () {Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Login();
+                    },
+                  ),
+                );},
+            color: Colors.white70,
+            textColor: Colors.black,
             border: kPrimaryColor,
           ),
           SizedBox(
-            height: 15.0,
+            height: 10.0,
           ),
           RoundedButton(
             text: 'Sign In',
-            press: () {},
+            press: () {Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return Login();
+                    },
+                  ),
+                );},
             color: kBgColor,
             textColor: kPrimaryColor,
             border: kPrimaryColor,
