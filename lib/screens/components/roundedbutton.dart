@@ -26,7 +26,7 @@ class RoundedButton extends StatelessWidget {
           ),
           borderRadius: BorderRadius.all(Radius.circular(15))),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(15),
         child: newElevatedButton(),
       ),
     );
