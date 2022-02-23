@@ -46,36 +46,46 @@ class Body extends StatelessWidget {
           SizedBox(
             height: 30.0,
           ),
-          RoundedButton(
-            text: 'Register Now',
-            press: () {Navigator.push(
+          Container(
+            width: size.width * 0.8,
+            child: RoundedButton(
+              text: 'Register Now',
+              press: () {
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
                       return Login();
                     },
                   ),
-                );},
-            color: Colors.white70,
-            textColor: Colors.black,
-            border: kPrimaryColor,
+                );
+              },
+              color: Colors.white70,
+              textColor: Colors.black,
+              border: kPrimaryColor,
+            ),
           ),
           SizedBox(
             height: 10.0,
           ),
-          RoundedButton(
-            text: 'Sign In',
-            press: () {Navigator.push(
+          Container(
+            width: size.width * 0.8,
+            child: RoundedButton(
+              text: 'Sign In',
+              press: () {
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) {
                       return Login();
                     },
                   ),
-                );},
-            color: kBgColor,
-            textColor: kPrimaryColor,
-            border: kPrimaryColor,
+                );
+              },
+              color: kBgColor,
+              textColor: kPrimaryColor,
+              border: kPrimaryColor,
+            ),
           )
         ],
       ),
